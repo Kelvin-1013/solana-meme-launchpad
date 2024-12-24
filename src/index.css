@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 260 20% 10%;
+    --foreground: 0 0% 100%;
+    --border: 260 20% 20%;
+    --input: 260 20% 20%;
+    --ring: 260 30% 50%;
+    --radius: 0.75rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-[#0f0b1e] text-foreground font-['Inter'];
+    background-image: radial-gradient(circle at 50% 50%, rgba(155, 135, 245, 0.1) 0%, rgba(15, 11, 30, 0) 50%);
+  }
+
+  .glass-card {
+    @apply bg-card border border-card-border backdrop-blur-md;
+    box-shadow: 0 4px 24px -1px rgba(0, 0, 0, 0.2);
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary;
+  }
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(155, 135, 245, 0.1);
+  pointer-events: none;
+  transform-origin: center center;
+}
